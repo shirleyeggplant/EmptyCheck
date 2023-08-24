@@ -1,0 +1,64 @@
+{
+  "description": "Keysight InfiniiVision Oscilloscope DSOX1204A - CN58026119",
+  "dns_hostname": "k-dx1204a-26119",
+  "model_number": "DSOX1204A"
+}
+{
+  "description": "Agilent MSO6102A (MY44004512)",
+  "dns_hostname": "a-m6102a-004512.png.is.keysight.com",
+  "model_number": "MSO6102A"
+}
+{
+  "description": "Keysight InfiniiVision Oscilloscope DSOX1204A - CN58026119",
+  "dNS_hostname": "k-dx1204a-26119",
+  "firmware_revision": "02.12.2021071625",
+  "gPIB_over_LAN_protocol": "TCPIP::141.183.188.171::inst0::INSTR",
+  "hiSLIP_LAN_protocol": "TCPIP::141.183.188.171::hislip0::INSTR",
+  "ipv4_address": "141.183.188.171",
+  "mac_address": "00-30-D3-16-31-13",
+  "mDNS_hostname": "k-dx1204a-26119.local",
+  "model_number": "DSOX1204A",
+  "serial_number": "CN58026119",
+  "usb": "USB0::10893::902::CN58026119::0::INSTR"
+}
+{
+  "description": "Agilent MSO6102A (MY44004512)",
+  "dNS_hostname": "a-m6102a-004512.png.is.keysight.com",
+  "firmware_revision": "06.20.0000",
+  "gPIB_over_LAN_protocol": "",
+  "hiSLIP_LAN_protocol": "",
+  "ipv4_address": "10.82.102.127",
+  "mac_address": "00-30-d3-0e-29-b0",
+  "mDNS_hostname": "",
+  "model_number": "MSO6102A",
+  "serial_number": "MY44004512",
+  "usb": "USB0::2391::5970::MY44004512::INSTR"
+}
+{
+  "description": "Keysight InfiniiVision Oscilloscope DSOX1204A - CN58026119",
+  "dNS_hostname": "k-dx1204a-26119",
+  "firmware_revision": "02.12.2021071625",
+  "gPIB_over_LAN_protocol": "TCPIP::141.183.188.171::inst0::INSTR",
+  "group_id": 2,
+  "hiSLIP_LAN_protocol": "TCPIP::141.183.188.171::hislip0::INSTR",
+  "ipv4_address": "141.183.188.171",
+  "mac_address": "00-30-D3-16-31-13",
+  "mDNS_hostname": "k-dx1204a-26119.local",
+  "model_number": "DSOX1204A",
+  "serial_number": "CN58026119",
+  "usb": "USB0::10893::902::CN58026119::0::INSTR"
+}
+{
+  "description": "Agilent MSO6102A (MY44004512)",
+  "dNS_hostname": "a-m6102a-004512.png.is.keysight.com",
+  "firmware_revision": "06.20.0000",
+  "gPIB_over_LAN_protocol": "",
+  "group_id": 2,
+  "hiSLIP_LAN_protocol": "",
+  "ipv4_address": "10.82.102.127",
+  "mac_address": "00-30-d3-0e-29-b0",
+  "mDNS_hostname": "",
+  "model_number": "MSO6102A",
+  "serial_number": "MY44004512",
+  "usb": "USB0::2391::5970::MY44004512::INSTR"
+}

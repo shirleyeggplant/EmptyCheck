@@ -1,0 +1,28 @@
+[
+ {
+   "model_number": "DSOX1204A",
+   "serial_number": "CN58026119",
+   "firmware_revision": "02.12.2021071625",
+   "description": "Keysight InfiniiVision Oscilloscope DSOX1204A - CN58026119",
+   "hiSLIP_LAN_protocol": "TCPIP::141.183.188.171::hislip0::INSTR",
+   "gPIB_over_LAN_protocol": "TCPIP::141.183.188.171::inst0::INSTR",
+   "usb": "USB0::10893::902::CN58026119::0::INSTR",
+   "dNS_hostname": "k-dx1204a-26119",
+   "mDNS_hostname": "k-dx1204a-26119.local",
+   "ipv4_address": "141.183.188.171",
+   "mac_address": "00-30-D3-16-31-13"
+},
+ {
+   "model_number": "MSO6102A",
+   "serial_number": "MY44004512",
+   "firmware_revision": "06.20.0000",
+   "description": "Agilent MSO6102A (MY44004512)",
+   "hiSLIP_LAN_protocol": "",
+   "gPIB_over_LAN_protocol": "",
+   "usb": "USB0::2391::5970::MY44004512::INSTR",
+   "dNS_hostname": "a-m6102a-004512.png.is.keysight.com",
+   "mDNS_hostname": "",
+   "ipv4_address": "10.82.102.127",
+   "mac_address": "00-30-d3-0e-29-b0"
+}
+]

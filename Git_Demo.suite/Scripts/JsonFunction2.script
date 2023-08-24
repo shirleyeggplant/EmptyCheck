@@ -1,0 +1,26 @@
+﻿displayData "tc.json"
+
+
+to displayData jsonFileLocation
+
+	put file ResourcePath(jsonFileLocation) as a property list into tcData
+	
+	put 1 into counter
+	
+	repeat for each tcData.steps
+		
+		put "Step "&counter
+		put "-----------------------"
+		put it.action_name
+		put it.action_id	
+		put ""
+		
+		put it   #display whole element
+		put ""
+		
+		put @""trial""globallyUniqueString()
+		put counter+1 into counter
+		
+	end repeat
+	
+end displayData

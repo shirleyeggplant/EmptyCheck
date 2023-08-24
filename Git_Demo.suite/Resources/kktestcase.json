@@ -1,0 +1,48 @@
+{
+	"model_name": "Breakfast",
+	"test_case_name": "kkthemebreakfast",
+	"valid": true,
+	"steps": [
+		{
+			"action_name": "Prepare Food",
+			"parameters": []
+		},
+		{
+			"action_name": "Cook Eggs",
+			"parameters": []
+		},
+		{
+			"action_name": "Cook Hash Browns",
+			"parameters": []
+		},
+		{
+			"action_name": "Cook Bacon",
+			"parameters": []
+		},
+		{
+			"action_name": "Cook Beans",
+			"parameters": []
+		},
+		{
+			"action_name": "Cook Sausages",
+			"parameters": []
+		},
+		{
+			"action_name": "Serve Food",
+			"parameters": [
+				{
+					"name": "test",
+					"value": "99"
+				},
+				{
+					"name": "test222",
+					"value": "105"
+				}
+			]
+		},
+		{
+			"action_name": "Plate up",
+			"parameters": []
+		}
+	]
+}

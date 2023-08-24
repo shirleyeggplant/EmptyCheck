@@ -1,0 +1,38 @@
+﻿displayData "kktestcase.json"
+
+
+to displayData jsonFileLocation
+
+	put file ResourcePath(jsonFileLocation) as a property list into tcData
+	
+	put 1 into counter
+	
+	repeat for each tcData.steps
+		
+		put "Step "&counter
+		put "-----------------------"
+		put "id: "&counter
+		put it.action_name
+		put ""
+		
+		put it into stepElem
+		put 1 into paramCounter
+		#put it   #display whole element
+		
+		put "parameters:"
+		put ""
+		
+		repeat for each stepElem.parameters
+			
+			put "param id: "&paramCounter
+			put it.name
+			put it.value
+			put ""
+			put paramCounter+1 into paramCounter
+		end repeat
+		
+		put counter+1 into counter
+		
+	end repeat
+	
+end displayData

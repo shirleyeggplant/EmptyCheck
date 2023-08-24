@@ -1,0 +1,91 @@
+﻿# call the IAM endpoint for the keycloak details that make up the auth url
+set iamDetails to iam_getDetails(daiUrl: "http://localhost:8000" by name)
+set keycloak_base_url to iamDetails.keycloak_base_url
+set keycloak_realm to iamDetails.keycloak_realm
+set auth_url to !"[[keycloak_base_url]]realms/[[keycloak_realm]]/protocol/openid-connect/token"
+
+#Set daiUrl8000 to !"http://localhost:8000"
+
+# save the auth token
+set token to auth(client_secret: "02f9a0fc-bd92-4478-b598-10219b4a0149", auth_url: auth_url by name)
+
+set requestheaders to {"Accept": "*/*", "Authorization": "Bearer" && token}
+
+set modelinfo to getmodelinfo(daiurl2:"http://localhost:8000", requestheaders: requestheaders by name)
+
+set tclist to getTClist (daiurl3:"http://localhost:8000", requestheaders: requestheaders by name)
+
+set expmodel to exportmodel (daiurl4:"http://localhost:8000", requestheaders: requestheaders by name)
+
+//set impmodel to importmodel (daiurl5:"http://localhost:8000", requestheaders: requestheaders by name)
+
+# pass that token to other API calls in the Authorization header as a Bearer token, example:
+#post {a JSON payload} to {a DAI endpoint} with headers {Authorization: "Bearer" && token}
+
+to auth client_secret, auth_url
+
+	set headers to {"Content-Type": "application/x-www-form-urlencoded"}
+	set payload to {client_id: "client:dai:agent:integration", client_secret: client_secret, grant_type: "client_credentials"}
+
+	post payload to url auth_url with headers headers
+	put it as a property list into response
+	//log response
+	return response.access_token
+	
+end auth
+
+to iam_getDetails daiUrl
+	
+	set endpoint to "/composer/api/v1/services/iam/v1.0.0"
+	get url !"[[daiUrl]][[endpoint]]"
+	set iamDetails to it 
+	//log it
+	return iamDetails as a property list
+	
+end iam_getDetails
+
+
+to getmodelinfo daiUrl2, requestheaders
+
+	//set endpoint2 to "/modeler_service/api/v1/models"
+	set endpoint2 to "/composer/api/v1/models"
+	get url !"[[daiUrl2]][[endpoint2]]" with headers requestheaders
+	//set modelinfo to it 
+	put it as a property list into response
+	//log response
+	return modelinfo as a property list	
+end getmodelinfo
+
+to getTClist daiUrl3, requestheaders
+	set endpoint3 to "/modeler_service/api/v1/test_cases"
+	get url !"[[daiUrl3]][[endpoint3]]" with headers requestheaders
+	put it  into response
+	//log response
+	return tclist as a property list
+end getTClist
+
+to exportmodel daiUrl4, requestheaders
+	set endpoint4 to "/modeler_service/api/v1/models/756a616b-13f7-4e62-9cab-3383189e846b/latest_version/export"
+	get url !"[[daiUrl4]][[endpoint4]]" with headers requestheaders
+	put it as property list into response
+	put 2 into response.group_id
+	
+	//put {{ 
+	//, "group_id":2
+	//}} after the first item of it
+	
+	put JSONFormat(it)
+	
+	put it into file "C:\Users\yokemah3\Desktop\Suite\salesforce\yoke_Salesforce_Framework.suite\test.json"
+	return it
+	
+	return expmodel 
+end exportmodel
+
+//to importmodel daiUrl5, requestheaders
+//set endpoint5 to "/modeler_service/api/v1/models"
+//post url !"[[daiUrl5]][[endpoint5]]" with headers requestheaders
+//put it as a property list into response
+//log response
+return impmodel as a property list
+//end importmodel

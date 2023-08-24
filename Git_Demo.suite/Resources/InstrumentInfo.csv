@@ -1,3 +1,0 @@
-﻿Model Number,Serial number,Firmware revision,Description,HiSLIP LAN protocol,GPIB over LAN protocol,USB (USBTMC/488),DNS hostname,mDNS hostname,IPv4 address,Ethernet (MAC) address
-DSOX1204A,CN58026119,02.12.2021071625,Keysight InfiniiVision Oscilloscope DSOX1204A - CN58026119,TCPIP::141.183.188.171::hislip0::INSTR,TCPIP::141.183.188.171::inst0::INSTR,USB0::10893::902::CN58026119::0::INSTR,k-dx1204a-26119,k-dx1204a-26119.local,141.183.188.171,00-30-D3-16-31-13
-MSO6102A,MY44004512,06.20.0000,Agilent MSO6102A (MY44004512),,,USB0::2391::5970::MY44004512::INSTR,a-m6102a-004512.png.is.keysight.com,,10.82.102.127,00-30-d3-0e-29-b0
